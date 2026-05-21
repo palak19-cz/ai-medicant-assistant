@@ -1,0 +1,37 @@
+{
+  "folders": [
+    { "name": "🩺 MediPredict", "path": "." },
+    { "name": "⚛️  Frontend",   "path": "./frontend" },
+    { "name": "🐍 Backend",     "path": "./backend" }
+  ],
+  "settings": {
+    "editor.formatOnSave": true,
+    "editor.tabSize": 2,
+    "editor.wordWrap": "on",
+    "files.exclude": {
+      "**/node_modules": true,
+      "**/__pycache__": true,
+      "**/.venv": true,
+      "**/venv": true
+    },
+    "emmet.includeLanguages": { "javascript": "javascriptreact" },
+    "tailwindCSS.includeLanguages": { "javascript": "javascript" },
+    "python.defaultInterpreterPath": "./backend/venv/Scripts/python.exe",
+    "terminal.integrated.env.windows": {},
+    "[javascript]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+    "[javascriptreact]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+    "[python]": { "editor.defaultFormatter": "ms-python.python" }
+  },
+  "extensions": {
+    "recommendations": [
+      "dsznajder.es7-react-js-snippets",
+      "bradlc.vscode-tailwindcss",
+      "ms-python.python",
+      "ms-python.pylance",
+      "eamodio.gitlens",
+      "esbenp.prettier-vscode",
+      "formulahendry.auto-rename-tag",
+      "PKief.material-icon-theme"
+    ]
+  }
+}

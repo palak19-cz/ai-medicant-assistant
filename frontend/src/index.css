@@ -1,0 +1,96 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --teal:       #0F6E56;
+    --teal-light: #E1F5EE;
+    --teal-mid:   #1D9E75;
+    --coral:      #D85A30;
+    --coral-light:#FAECE7;
+    --purple:     #534AB7;
+    --purple-light:#EEEDFE;
+    --amber:      #BA7517;
+    --amber-light:#FAEEDA;
+  }
+
+  * { box-sizing: border-box; }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: #f8faf9;
+    color: #1a1a1a;
+    min-height: 100vh;
+  }
+
+  h1, h2, h3 {
+    font-family: 'Sora', sans-serif;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-teal-600 text-white font-medium px-6 py-3 rounded-xl
+           hover:bg-teal-800 active:scale-95 transition-all duration-200
+           focus:outline-none focus:ring-2 focus:ring-teal-400 focus:ring-offset-2;
+  }
+
+  .btn-outline {
+    @apply border border-teal-600 text-teal-600 font-medium px-6 py-3 rounded-xl
+           hover:bg-teal-50 active:scale-95 transition-all duration-200
+           focus:outline-none focus:ring-2 focus:ring-teal-400 focus:ring-offset-2;
+  }
+
+  .input-field {
+    @apply w-full px-4 py-3 rounded-xl border border-gray-200 bg-gray-50
+           font-dm text-gray-900 placeholder-gray-400 text-sm
+           focus:outline-none focus:border-teal-400 focus:bg-white
+           transition-all duration-200;
+  }
+
+  .card {
+    @apply bg-white rounded-2xl border border-gray-100 shadow-sm;
+  }
+
+  .section-label {
+    @apply text-xs font-semibold uppercase tracking-widest text-gray-400;
+  }
+}
+
+/* Staggered fade-up animation */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.fade-up {
+  animation: fadeUp 0.6s ease forwards;
+  opacity: 0;
+}
+.fade-up-1 { animation-delay: 0.1s; }
+.fade-up-2 { animation-delay: 0.2s; }
+.fade-up-3 { animation-delay: 0.3s; }
+.fade-up-4 { animation-delay: 0.4s; }
+.fade-up-5 { animation-delay: 0.5s; }
+.fade-up-6 { animation-delay: 0.6s; }
+
+/* Floating animation for hero graphic */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-10px); }
+}
+.float { animation: float 4s ease-in-out infinite; }
+
+/* Subtle pulse for health badge */
+@keyframes pulse-ring {
+  0%   { box-shadow: 0 0 0 0 rgba(15,110,86,0.3); }
+  70%  { box-shadow: 0 0 0 10px rgba(15,110,86,0); }
+  100% { box-shadow: 0 0 0 0 rgba(15,110,86,0); }
+}
+.pulse-teal { animation: pulse-ring 2s ease-out infinite; }
